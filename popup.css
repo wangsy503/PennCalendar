@@ -1,0 +1,13 @@
+.extract-button {
+    background-color: #011F5B
+    ;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.extract-button:hover {
+background-color: #0056b3;
+}

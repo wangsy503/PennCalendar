@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "name": "UPENN Course Calendar",
+    "version": "0.1",
+    "description": "Extract course and date information from UPenn course selection page and export as an iCalendar file.",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "downloads"
+    ],
+    "icons": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://courses.upenn.edu/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "host_permissions": [
+        "https://courses.upenn.edu/*"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+      }
+    }
+  }
+  
