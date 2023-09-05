@@ -21,7 +21,6 @@ if (window.contentScriptInjected !== true) {
     
     // Find all result elements and extract course information from each
     let resultElements = document.querySelectorAll('.result--group-start');
-    console.log(resultElements);
     let extractedCourses = [];
   
     resultElements.forEach(resultElement => {

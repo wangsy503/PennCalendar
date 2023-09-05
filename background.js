@@ -50,14 +50,20 @@ function formatTime(date) {
 function convertTo24Hour(timeString, isPM) {
     const time = timeString.split(':');
     const hours = time[0];
-    console.log(time[1]);
-    console.log(time.Length);
+    
+    console.log("time.length: ");
+    console.log(time.length);
     const minutes = time.length > 1 ? time[1] : '00';
     console.log("hours: ");
     console.log(hours);
     console.log("minutes: ");
     console.log(minutes);
-    return (isPM? parseInt(hours) + 12 : parseInt(hours)) * 60 + parseInt(minutes);
+    if (isPM){
+      if (parseInt(hours) != 12){
+        return (parseInt(hours) + 12) * 60 + parseInt(minutes);
+      }
+    }
+    return parseInt(hours) * 60 + parseInt(minutes);
 }
 
 
